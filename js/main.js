@@ -28,3 +28,11 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 
 cards.forEach(card => observer.observe(card));
+
+// === MENÚ MÓVIL ===
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+navToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('nav-open');
+});
